@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cores do nome da empresa e fundo do nome */
+header {
+    background: #030303;
+    color: #cfbb04;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+/* Cores das links de navegação */
+.nav-links a {
+    color: #cfbb04;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #cfbb04;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: #cfbb04;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    background: url('IMAGEM/tech1.png') no-repeat center center/cover;
+    color: #fdfd02;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px; /* Cantos arredondados */
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.services {
+    padding: 50px 20px;
+    background: #fbfcfd;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service h3 {
+    background: #fafaf9;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo específico para a seção "Sobre Nós" */
+.about-us .service {
+    flex-basis: 60%;
+    max-width: 1700px;
+    margin-bottom: 10px; /* Espaçamento entre cada bloco de descrição */
+}
+.about-us .service p {
+    margin-bottom: 20px; /* Espaço entre os parágrafos */
+}
+
+/* Estilo para a nova seção de fotos da equipe */
+.team-gallery {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.team-gallery h2 {
+    margin-bottom: 1.5rem;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gallery-item {
+    width: 300px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-item p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Estilo específico para a seção de Carrossel de Fotos */
+.photo-carousel {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-photo {
+    width: 700px;
+    height: auto;
+    border-radius: 8px;
+    display: none;
+}
+
+.carousel-photo.active {
+    display: block;
+}
+
+.carousel-container i {
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
+
+.contact {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Adicionando a transição */
+}
+
+.contact-item:hover {
+    transform: translateY(-10px); /* Efeito de hover para contatos */
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #333;
+}
+
+footer {
+    background: #050505;
+    color: rgb(255, 255, 0);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        transition: all 0.3s ease;
+        background: #333;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
